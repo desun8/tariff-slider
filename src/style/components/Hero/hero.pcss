@@ -1,0 +1,227 @@
+.hero {
+  --orange: #ff834e;
+
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background-color: rgba(39, 39, 39, 1);
+  overflow: hidden;
+
+  @media (--tablet) {
+    height: auto;
+  }
+
+  @media (--tabletOnly) {
+    min-height: 430px;
+    max-height: 430px;
+  }
+
+  @media (--tablet960) {
+    max-height: 648px;
+  }
+
+  @media (--desktop1200) {
+    max-height: 792px;
+  }
+
+  &_control {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+
+    @media (--tablet) {
+      /* left: 50%; */
+      right: 0;
+      bottom: 42px;
+      width: 500px;
+      /* max-width: 1442px; */
+      padding: 0 20px;
+      justify-content: flex-end;
+      /* transform: translate3d(-50%, 0, 0); */
+    }
+
+    @media (--desktop1200) {
+      bottom: 112px;
+    }
+
+    @media (width > 1442px) {
+      padding: 0;
+      right: 5%;
+    }
+
+    @media (width > 1678px) {
+      right: 10%;
+    }
+
+    & button.owl-prev,
+    & button.owl-next {
+      @apply --trans;
+
+      display: none;
+      outline: none;
+
+      @media (--tablet) {
+        @apply --flex-center;
+
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        background: transparent;
+        border: 2px solid #fff;
+        cursor: pointer;
+      }
+
+      @media (--tabletOnly) {
+        width: 32px;
+        height: 32px;
+        border-width: 1px;
+      }
+
+      @media (--desktop1200) {
+        width: 62px;
+        height: 62px;
+      }
+
+      & svg {
+        @media (--tabletOnly) {
+          transform: scale(0.7);
+        }
+
+        & path {
+          @apply --trans;
+        }
+      }
+
+      &:hover {
+        @media (--tablet960) {
+          border-color: var(--orange);
+        }
+
+        & svg path {
+          @media (--tablet960) {
+            fill: var(--orange);
+          }
+        }
+      }
+    }
+
+    & button.owl-prev {
+      justify-content: flex-end;
+
+      & svg {
+        @media (--tabletOnly) {
+          position: relative;
+          left: 3px;
+        }
+
+        @media (--desktop1200) {
+          position: relative;
+          left: -11px;
+        }
+      }
+    }
+
+    & button.owl-next {
+      margin-left: 10px;
+      margin-right: 20px;
+      justify-content: flex-start;
+
+      @media (--tablet960) {
+        margin-left: 20px;
+        margin-right: 40px;
+      }
+
+      @media (--desktop1200) {
+        margin-right: 40px;
+      }
+
+      @media (--desktop1300) {
+        margin-right: 80px;
+      }
+
+      @media (width > 1690px) {
+        margin-right: 140px;
+      }
+
+      @media (width > 1800px) {
+        margin-right: 180px;
+      }
+
+      & svg {
+        @media (--tabletOnly) {
+          position: relative;
+          right: 3px;
+        }
+
+        @media (--desktop1200) {
+          position: relative;
+          right: -11px;
+        }
+      }
+    }
+  }
+
+  & .link-btn {
+    padding: 8px 22px;
+    color: var(--orange);
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--orange);
+
+    @media (--tablet) {
+      @apply --trans;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 14px;
+      color: #fff;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 400;
+      border-width: 2px;
+      background-color: var(--orange);
+    }
+
+    @media (--tabletOnly) {
+      padding: 0 10px;
+      font-size: 14px;
+      line-height: 16px;
+      border-width: 1px;
+    }
+
+    /* @media (--tablet) {
+      
+    } */
+
+    @media (--desktop1200) {
+      padding: 14px 18px;
+      padding-right: 4px;
+    }
+
+    &:hover {
+      @media (--tablet960) {
+        background-color: var(--orangeDarken);
+        border-color: var(--orangeDarken);
+      }
+    }
+
+    & svg {
+      display: none;
+
+      @media (--tablet) {
+        display: block;
+        transform: scale(0.4) translateX(-10px);
+      }
+    }
+  }
+
+  & p {
+    margin: 0;
+  }
+}

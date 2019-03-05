@@ -1,0 +1,48 @@
+.header-phone {
+  display: none;
+
+  @media (width >= 1110px) {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    margin-left: 50px;
+  }
+
+  @media (--desktop1300) {
+    margin-left: 60px;
+  }
+
+  @media (width > 1350px) {
+    margin-left: 100px;
+  }
+
+  &_modal {
+    @apply --trans;
+
+    padding: 12px 26px;
+    color: var(--orange);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+    background: none;
+    border: 1px solid var(--orange);
+
+    &:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+
+  &_number {
+    display: none;
+    margin-left: 30px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+
+    @media (--desktop1300) {
+      display: block;
+    }
+  }
+}
