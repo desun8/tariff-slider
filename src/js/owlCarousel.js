@@ -8,10 +8,17 @@ $(document).ready(() => {
     const owlPrev = $(".owl-prev");
 
     owl.owlCarousel({
-      items: 3,
-      mouseDrag: false,
+      mouseDrag: true,
       dots: false,
-      smartSpeed: 600
+      smartSpeed: 600,
+      responsive: {
+        1200: {
+          items: 3
+        },
+        768: {
+          items: 2
+        }
+      }
     });
 
     owl.on("changed.owl.carousel", event => {
@@ -47,19 +54,32 @@ $(document).ready(() => {
   }
 
   // Показ краткого описания тарифа
-  if ($('.tariff_btn-info').length > 0) {
-    $('.tariff').click(function(e) {
-      if ($(e.target).hasClass('tariff_btn-info')) {
+  if ($(".tariff_btn-info").length > 0) {
+    $(".tariff").click(function(e) {
+      if ($(e.target).hasClass("tariff_btn-info")) {
         $(e.target).hide();
-        $(this).find('.tariff_describe').addClass('tariff_describe--active');
-        $(this).find('.tariff_btn-close').show();
+        $(this)
+          .find(".tariff_describe")
+          .addClass("tariff_describe--active");
+        $(this)
+          .find(".tariff_btn-close")
+          .show();
       }
 
-      if ($(e.target).hasClass('tariff_btn-close')) {
+      if ($(e.target).hasClass("tariff_btn-close")) {
         $(e.target).hide();
-        $(this).find('.tariff_describe').removeClass('tariff_describe--active');
-        $(this).find('.tariff_btn-info').show();
+        $(this)
+          .find(".tariff_describe")
+          .removeClass("tariff_describe--active");
+        $(this)
+          .find(".tariff_btn-info")
+          .show();
       }
-    })
+    });
   }
+
+  $("#showAllTariff").click(function() {
+    $(this).hide();
+    $(".tariff--mobileHide").show();
+  });
 });

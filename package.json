@@ -2,7 +2,7 @@
   "name": "tariff-slider",
   "version": "1.0.0",
   "description": "build project via webpack",
-  "private": false,
+  "private": true,
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",

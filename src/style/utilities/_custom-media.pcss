@@ -10,6 +10,9 @@
 @custom-media --tablet (width >= 48em);
 @custom-media --tablet960 (width >= 60em);
 @custom-media --tabletOnly (width >= 48em) and (width <= 50em);
+@custom-media --tabletBig (width >= 58.75em) and (width < 75em);
+
+@custom-media --adaptive (width <= 48em);
 
 /* @custom-media --tabletBig (width >= 58.75em) and (width < 80em);
 @custom-media --tabletNoBig (width >= 48em) and (width < 58.75em);
@@ -35,11 +38,11 @@
 
 /* Все что меньше планшетов 768px */
 
-/* @custom-media --mobile (width < 48em);
-@custom-media --mobileMin (width <= 20em); */
+@custom-media --mobile (width < 48em);
+/* @custom-media --mobileMin (width <= 20em); */
 
 /* Брейкпоинты для телефонов */
-@custom-media --mobile375 (width >= 23.438em);
+/* @custom-media --mobile375 (width >= 23.438em); */
 
 /* @custom-media --mobile400 (width < 25em);
 @custom-media --mobile500 (width < 31.25em);

@@ -11,3 +11,4 @@ import './images/uniform.svg';
 import './images/icon-questionMark.svg';
 import './images/close.svg';
 import './images/bg.jpg';
+import './images/bgMobile.png';
