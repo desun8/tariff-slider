@@ -816,14 +816,14 @@ body {
   align-items: center;
   padding-top: 50px;
   padding-bottom: 110px;
-  background-image: url(/images/bg.jpg);
+  background-image: url(./images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover
 }
 @media (max-width: 47.999em) {
 .tariff-block {
     padding-bottom: 50px;
-    background-image: url(/images/bgMobile.png)
+    background-image: url(./images/bgMobile.png)
 }
   }
 .tariff-block_title {
@@ -1248,13 +1248,13 @@ body {
     height: 25px;
   }
 .extra-item_icon--grenade {
-      background-image: url(/images/hand-grenade.svg);
+      background-image: url(./images/hand-grenade.svg);
     }
 .extra-item_icon--target {
-      background-image: url(/images/target.svg);
+      background-image: url(./images/target.svg);
     }
 .extra-item_icon--uniform {
-      background-image: url(/images/uniform.svg);
+      background-image: url(./images/uniform.svg);
     }
 .extra-item_name {
     flex-grow: 5;
