@@ -551,7 +551,7 @@ template {
   -webkit-transform: translate3d(-50%, 0, 0);
           transform: translate3d(-50%, 0, 0)
 }
-@media (max-width: 48em) {
+@media (min-width: 48em) {
 .owl-carousel .owl-dots {
     bottom: 0
 }
@@ -751,7 +751,6 @@ body {
 /* @custom-media --desktop1800 (width >= 112.5em); */
 /* @custom-media --desktop1900 (width >= 118.75em); */
 /* Планшеты и устройства с небольшими диоганалями */
-/* @custom-media --adaptive (width < 75em); */
 /* @custom-media --tabletBig (width >= 58.75em) and (width < 80em);
 @custom-media --tabletNoBig (width >= 48em) and (width < 58.75em);
 @custom-media --tablet (width >= 48em) and (width < 80em);
@@ -761,6 +760,7 @@ body {
 /* @custom-media --tablet980 (width < 61.25em); */
 /* @custom-media --tablet900 (width < 56.25em); */
 /* @custom-media --notTablet (width > 48em); */
+/* @custom-media --tablet (width <= 48em); */
 /* @custom-media --mobile (width < 47em); */
 /* @custom-media --mobile400 (width < 25em); */
 /* @custom-media --tablet800 (width > 50em) and (width < 80em);
@@ -892,7 +892,7 @@ body {
       margin-bottom: 0;
     }
   }
-@media (max-width: 48em) {
+@media (min-width: 48em) {
       .tariff:hover .tariff_btn {
         display: flex;
       }
